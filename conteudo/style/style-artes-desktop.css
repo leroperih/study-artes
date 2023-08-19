@@ -7,11 +7,10 @@ header {
   padding: 2em 4em 0em;
 } header::after {
   background-image: url(../bg-header-cracked.png);
-} header > div:nth-of-type(1) {
-  flex-direction: row;
 }
 
- header div {
+header > div:nth-of-type(1) {
+  flex-direction: row;
   height: 70%;
 } header > div:nth-of-type(2) {
   height: 30%;

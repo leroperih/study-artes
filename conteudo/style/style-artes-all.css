@@ -159,18 +159,19 @@ header {  /* Header ------------------------------------------------------------
   background: url(../bg-header-cracked-mobile.png) bottom center no-repeat;
   background-size: 100%;
 } header * {
-  gap: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
+} header > div:nth-of-type(1) {
+  height: 80%;
+} header > div:nth-of-type(2) {
+  width: 100%; height: 20%;
+  justify-content: left;
 } header div {
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
-  width: 100%; height: 80%;
-} header > div:nth-of-type(2) {
-  width: 100%; height: 20%;
-  justify-content: left;
+  width: 100%; height: 100%;
 } header > div div:nth-of-type(3)::after {
   content: "";
   width: 90%; height: 1px;
@@ -213,7 +214,8 @@ main {  /* Main ----------------------------------------------------------------
 
 div#social {
   position: sticky;
-  top: 1em;
+  width: fit-content;
+  top: 1.5em;
 } div#social * {
   height: var(--social-element-size);
   display: flex;
@@ -221,11 +223,7 @@ div#social {
   align-items: center;
   transition-duration: var(--transition-time-01);
 } div#social > div {
-  width: fit-content;
-  height: var(--social-element-size);
-  padding: 0.35em;
   gap: 1em;
-  align-items: start;
 } div#social ul {
   gap: 0.5em;
   list-style-type: none;
