@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+/* TELAS PEQUENAS */
+
+
+:root {
+
+  --social-element-size: 3em;
+
+
+
+
+  --transition-time-01: 0.25s;
+
+
+
+
+  --hover-color-01: #ffffff44;
+  --hover-color-02: #ffffff22;
+  --hover-color-03: #ffffff08;
+  --default-color-grey-01: #606060;
+  --default-color-grey-02: #60606060;
+  --default-color-red-01: #f00000;
+  --default-color-red-02: #f0000088;
+
+  --color-darkest-black-01: #000000;
+  --color-darkest-black-02: #000000f0;
+  --color-darkest-black-03: #000000c0;
+  --color-darkest-black-04: #00000080;
+  --color-dark-black-01: #050505;
+  --color-dark-black-02: #05050580;
+  --color-dark-black-05: #05050528;
+  --color-medium-black-01: #161616;
+  --color-medium-black-02: #16161680;
+  --color-medium-black-03: #16161660;
+  --color-light-black-01: #222222;
+  --color-light-black-02: #22222288;
+  --color-light-black-03: #22222244;
+  --color-darkest-grey-01: #282828;
+  --color-dark-grey-01: #2f2f2f;
+  --color-dark-grey-02: #2f2f2f80;
+  --color-medium-grey-01: #484848;
+  --color-medium-grey-02: #48484880;
+  --color-medium-grey-03: #48484844;
+  --color-light-grey-01: #b0b0b0;
+  --color-light-grey-02: #b0b0b080;
+  --color-lighter-white-01: #ffffff;
+  --color-lighter-white-02: #ffffffd0;
+
+  --study-color-01: #4444ff;
+  --study-color-02: #4444ff88;
+  --study-color-03: #4444ff44;
+
+
+
+
+  --lateral-dark-gradient-effect-01:
+   linear-gradient(
+   90deg ,
+   #000000e0 ,
+   transparent ,
+   #000000e0
+  );
+
+
+
+  --fonte-animatic: 'Amatic SC', cursive;
+  --font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-angel: "Angel", sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {  /* CSS Padrão Geral */
+  padding: 0em; margin: 0em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+} body, html {
+  background-color: var(--color-dark-black-01);
+  width: 100vw; height: 100vh;
+  margin: auto;
+  perspective: 10px;
+  overflow-x: hidden;
+} body {
+  position: relative;
+} body * {
+  color: var(--color-light-grey-02);
+  font-family: var(--font-apple);
+  font-weight: lighter;
+}
+
+
+.scroll::-webkit-scrollbar {  /* Scroll Space */
+  background-color: var(--color-darkest-black-01); width: 0.5em;
+} .scroll::-webkit-scrollbar-track {  /* Fundo Scroll */
+  border-radius: 0.25em; border: 2px solid var(--color-darkest-black-01);
+  margin: 0.75em 0em;
+} .scroll::-webkit-scrollbar-track:hover {
+  background: var(--color-medium-black-01);
+} .scroll::-webkit-scrollbar-thumb {  /* Mover Scroll */
+  border: 1px solid var(--color-darkest-black-01); border-radius: 0.25em;
+  background-color: var(--color-medium-black-01);
+} .scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-grey-01);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {  /* Header -------------------------------------------------------------------------------------------------------------------- */
+  box-sizing: border-box;
+  position: relative;
+  height: calc(100% - 5em);
+  overflow: hidden;
+  padding: 1em;
+} header::after {
+  content: "";
+  width: 100%; height: 100%;
+  position: absolute;
+  left: 0em; bottom: 0em;
+  background: url(../bg-header-cracked-mobile.png) bottom center no-repeat;
+  background-size: 100%;
+} header * {
+  gap: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} header div {
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%; height: 80%;
+} header > div:nth-of-type(2) {
+  width: 100%; height: 20%;
+  justify-content: left;
+} header > div div:nth-of-type(3)::after {
+  content: "";
+  width: 90%; height: 1px;
+  background-color: var(--color-medium-grey-02);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {  /* Main ------------------------------------------------------------------------------------------------------------------------ */
+  position: relative;
+  background-color: var(--color-medium-black-01);
+  min-height: 100em;
+  padding: 0em 1em;
+}
+
+
+
+
+div#social {
+  position: sticky;
+  top: 1em;
+} div#social * {
+  height: var(--social-element-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: var(--transition-time-01);
+} div#social > div {
+  width: fit-content;
+  height: var(--social-element-size);
+  padding: 0.35em;
+  gap: 1em;
+  align-items: start;
+} div#social ul {
+  gap: 0.5em;
+  list-style-type: none;
+} div#social > ul > li > a {
+  height: fit-content;
+  transform: translateY(-0.2em);
+} div#social a:hover {
+  color: var(--color-light-grey-01);
+  font-weight: normal;
+}
+
+
+
+
+
+div#icon {
+  width: var(--social-element-size);
+  border-radius: 50%;
+  border: 1px solid var(--color-light-grey-02);
+  background-color: var(--color-darkest-black-03);
+} div#icon img
+, div#icon a {
+  width: 100%; height: 100%;
+} div#icon:hover > a {
+  width: 90%; height: 90%;
+}
