@@ -105,7 +105,6 @@
 } body {
   position: relative;
 } body * {
-  color: var(--color-light-grey-02);
   font-family: var(--font-apple);
   font-weight: lighter;
 }
@@ -159,6 +158,7 @@ header {  /* Header ------------------------------------------------------------
   background: url(../bg-header-cracked-mobile.png) bottom center no-repeat;
   background-size: 100%;
 } header * {
+  color: var(--color-light-grey-01);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,6 +204,8 @@ main {  /* Main ----------------------------------------------------------------
   background-color: var(--color-medium-black-01);
   min-height: 100em;
   padding: 0em 1em;
+} main * {
+  color: var(--color-lighter-white-02);
 }
 
 
